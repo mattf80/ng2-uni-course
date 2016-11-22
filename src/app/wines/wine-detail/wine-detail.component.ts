@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Wine } from './../wine';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wine-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WineDetailComponent implements OnInit {
 
+  @Input() selectedWine: Wine;
+  
   constructor() { }
 
   ngOnInit() {
