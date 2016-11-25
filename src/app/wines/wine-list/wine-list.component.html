@@ -6,7 +6,7 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <app-wine-item [wine]="wine"></app-wine-item>
+      <app-wine-item [wine]="wine" (click)="onSelected(wine)"></app-wine-item>
     </ul>
   </div>
 </div>
