@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Wine } from './../wine';
 
 @Component({
@@ -7,15 +7,10 @@ import { Wine } from './../wine';
   templateUrl: './wine-item.component.html',
   styleUrls: ['./wine-item.component.css']
 })
-export class WineItemComponent implements OnInit {
+export class WineItemComponent {
   
-  @Input()
-  wine: Wine;
-  wineId: number;
+  @Input() wine: Wine;
+  @Input() wineId: number;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

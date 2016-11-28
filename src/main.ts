@@ -5,6 +5,8 @@ import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 import { AppModule } from './app/';
 
+import { CellarService } from './app/cellar/cellar.service';
+
 if (environment.production) {
   enableProdMode();
 }

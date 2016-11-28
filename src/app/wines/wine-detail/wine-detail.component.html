@@ -8,9 +8,10 @@
     <h1>{{selectedWine?.name}}</h1>
   </div>
   <div class="col-xs-12">
-    <button class="btn btn-success">To Cellar</button>
-    <button class="btn btn-primary">Edit</button>
-    <button class="btn btn-danger">Delete</button>
+    <input type="number" placeholder="Qty" class="form-control input-sm">
+    <button class="btn btn-success" (click)="onAddToCellar()">To Cellar</button>
+    <button class="btn btn-primary" (click)="onEdit()">Edit</button>
+    <button class="btn btn-danger" (click)="onDelete()">Delete</button>
   </div>
 </div>
 <hr>
@@ -21,6 +22,8 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Grapes
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let grape of selectedWine?.grapes">{{grape.name}} ({{grape.percentage}}%)</li>
+    </ul>
   </div>
 </div>

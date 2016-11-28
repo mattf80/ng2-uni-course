@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
-    <a class="btn btn-success">New wine</a>
+    <a class="btn btn-success" [routerLink]="['new']">New wine</a>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <app-wine-item [wine]="wine" (click)="onSelected(wine)"></app-wine-item>
+      <app-wine-item *ngFor="let wine of wines; let i = index" [wine]="wine" [wineId]="i"></app-wine-item>
     </ul>
   </div>
 </div>
